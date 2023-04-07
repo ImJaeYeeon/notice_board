@@ -19,4 +19,4 @@ value('$_title','$_name','$_school','$_content')";
 mysqli_query($conn,$query);
 echo "<script>alert('작성되었습니다.');</script>";
 ?>
-<meta http-equiv="refresh" content="0; url=http://localhost/board/index.php">
+<meta http-equiv="refresh" content="0; url=http://localhost/notice_board/board/index.php">

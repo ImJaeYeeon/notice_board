@@ -13,13 +13,13 @@
             text-decoration: none;
             color: black;
         }
-        a:visited{
+        /* a:visited{
             text-decoration: none;
             color: #333;
         }
         a:hover{
             text-decoration: none;
-            color: red;}
+            color: red;} */
     </style>
     <title>게시판</title>
   </head>
@@ -33,13 +33,13 @@
     $count = mysqli_num_rows($result);
     for($i=0; $i<$count; $i++){
         $re=mysqli_fetch_row($result);
-        echo"<tr><td>$re[0]</td><td><a href='update_form.php?a=$re[0]'>$re[1]</a>&nbsp;</td><td> $re[2]</td><td> $re[3]</td></tr>";
+        echo"<tr><td><a href='content_form.php?a=$re[0]'>$re[0]</a>&nbsp;</td><td><a href='content_form.php?a=$re[0]'>$re[1]</a>&nbsp;</td><td> $re[2]</td><td> $re[3]</td></tr>";
     }
     mysqli_close($conn);
   ?>
   </table>
   <div style="margin: left 70px;">
-<a href="board.html" class="btn btn-outline-success">write</a>
+  <a href="board.html" class="btn btn-outline-success">write</a>
 </div>
 
 
